@@ -322,6 +322,9 @@ int main(void) {
       steer = (int16_t)(steerFixdt >> 16);  // convert fixed-point to integer
       speed = (int16_t)(speedFixdt >> 16);  // convert fixed-point to integer
 
+      steer *= .1;                          // apply steering coefficient
+      speed *= .1;                          // apply speed coefficient
+
       // ####### VARIANT_HOVERCAR #######
       #ifdef VARIANT_HOVERCAR
       if (inIdx == CONTROL_ADC) {               // Only use use implementation below if pedals are in use (ADC input)
