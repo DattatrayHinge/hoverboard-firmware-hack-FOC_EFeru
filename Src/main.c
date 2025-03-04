@@ -322,7 +322,7 @@ int main(void) {
       steer = (int16_t)(steerFixdt >> 16);  // convert fixed-point to integer
       speed = (int16_t)(speedFixdt >> 16);  // convert fixed-point to integer
 
-      steer *= 0.5;
+      steer *= 0.1;
       speed *= 0.1;
 
       // ####### VARIANT_HOVERCAR #######
